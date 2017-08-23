@@ -1,7 +1,7 @@
-html, body, material-app, md-sidenav-container, .my-content {
+md-sidenav-container {
   margin: 0;
   width: 100%;
-  height: 100%;
+  height: 0%;
 }
 
 .mat-sidenav.mat-sidenav-side {
@@ -33,13 +33,13 @@ a.mat-list .mat-list-item, .mat-nav-list .mat-list-item, .mat-selection-list .ma
 	font-size: 18px;
     padding-top: 0px;
 	padding-left:0px;
-	font-family: 'Nunito' serif;
+	font-family: 'Kreon', serif;
 	font-style: bold;
 	 height: 60px;
 }
 .mat-list{
 	
-    padding-left: 18px;
+    padding-left: 20%;
 }
 md-sidenav, 
 md-sidenav.md-locked-open, 
@@ -47,10 +47,39 @@ md-sidenav.md-closed.md-locked-open-add-active {
     min-width: 20% !important;
     width: 35vw !important;
     max-width: 200px !important;
+	
 } 
-.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-48 { font-size: 36px; }
 .mat-list-item-content:hover { 
     color: #ff503a;
 	font-size:20px;
 	font-weight:bolder;
 }
+
+
+.moving-left
+{
+  transition: transform 0.3s ease;
+  transform: translateX(0px);
+
+}
+.moving-left:hover
+{
+ transform: translateX(-10px);
+}
+
+.moving-right
+{
+  transition: transform 0.3s ease;
+  transform: translateX(0px);
+
+}
+.moving-right:hover
+{
+ transform: translateX(10px);
+}
+
+._head{
+	font-family: 'Kaushan Script', cursive;
+}
+

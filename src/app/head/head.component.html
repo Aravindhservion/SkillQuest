@@ -1,0 +1,51 @@
+<md-toolbar color="primary">
+		<button   md-icon-button (click)="sidenav.toggle()">
+			<md-icon class="md-24">menu</md-icon>
+		</button>
+		<span class="_head">SkillQuest</span>
+		<span class="example-spacer"></span>
+</md-toolbar>
+<md-sidenav-container>
+	
+</md-sidenav-container>
+<md-sidenav #sidenav mode="side" class="app-inner" >
+		<md-nav-list layout-align="center" style="padding-top:0px;">
+			<md-list class="moving-left" >
+				<md-list-item>
+					<p md-line></p>
+					<i  (click)="sidenav.toggle()" class="md-list-icon material-icons md-48">keyboard_arrow_left</i>
+				</md-list-item>
+				
+			</md-list>
+			<md-list  style="padding-top:20px padding-left:20px">
+				<md-list-item class="moving-right">
+						<md-icon md-list-icon >home</md-icon>
+						<p md-line>Home</p>
+				</md-list-item>
+				<md-list-item class="moving-right">
+					<md-icon md-list-icon >account_circle</md-icon>
+						<a href="account" md-line>Profile</a>
+				</md-list-item>
+				<md-list-item class="moving-right">
+						<md-icon md-list-icon >assessment</md-icon>
+						<a routerLink="/assessment" routerLinkActive="active"  md-line>Test</a>
+				</md-list-item>
+				<md-list-item class="moving-right">
+						<md-icon md-list-icon >mode_edit</md-icon>
+						<p md-line>Blog</p>
+				</md-list-item>
+				<md-list-item class="moving-right">
+						<md-icon md-list-icon >filter_drama</md-icon>
+						<p md-line>Services</p>
+				</md-list-item>
+				<md-list-item class="moving-right">
+						<md-icon md-list-icon >graphic_eq</md-icon>
+						<p md-line>Careers</p>
+				</md-list-item>
+				<md-list-item class="moving-right">
+						<md-icon md-list-icon >grain</md-icon>
+						<p md-line>About</p>
+				</md-list-item>
+			</md-list>
+		</md-nav-list>
+</md-sidenav>
