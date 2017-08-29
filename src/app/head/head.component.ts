@@ -7,5 +7,7 @@ import {MdSidenavModule} from '@angular/material';
    encapsulation: ViewEncapsulation.None,
 })
 export class HeadComponent {
- 
+	constructor(){
+		console.log("HeadComponent Loaded");
+	}
 }

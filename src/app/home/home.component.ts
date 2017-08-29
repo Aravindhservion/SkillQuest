@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {MdSidenavModule,MdGridListModule} from '@angular/material';
 import {HeadComponent} from '../head/head.component';
+
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',

@@ -8,15 +8,20 @@ import * as CryptoJS from 'crypto-js';;
 
 
 @Component({
-  selector: 'assessment',
-  templateUrl: './assessment.component.html',
-  styleUrls: ['./assessment.component.css']
+  selector: 'test',
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.component.css']
 })
-export class AssessmentComponent {
+export class TestComponent {
 	
 	constructor() 
 	{
-		console.log("AssessmentComponent");
-		console.log("loading..");
-	}
+		console.log("TestComponent");
+	 
+		var ciphertext = CryptoJS.AES.encrypt('vivekanandan', 'KEY');
+		var bytes  = CryptoJS.AES.decrypt(ciphertext.toString(), 'KEY');
+		var plaintext = bytes.toString(CryptoJS.enc.Utf8);
+		console.log(ciphertext.toString());
+		console.log(plaintext);
+    }
 }
