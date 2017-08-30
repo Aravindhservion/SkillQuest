@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +18,11 @@ import { PopularskillComponent } from './popular_skill/popular_skill.component';
 import { HomeComponent } from './home/home.component';
 import { HeadComponent } from './head/head.component';
 import { AccountComponent } from './account/account.component';
+
+
+import { ModuledataService } from './module_data/moduledata.service';
+
+
 
 export const ROUTES: Routes = [
 	 {  path: '', redirectTo: '/home' ,pathMatch:'full' },
@@ -38,6 +44,7 @@ export const ROUTES: Routes = [
 	
   imports: [
     BrowserModule,
+	HttpModule,
 	BrowserAnimationsModule,
 	MdButtonModule,
 	MdCardModule,
@@ -49,7 +56,7 @@ export const ROUTES: Routes = [
 	 RouterModule.forRoot(ROUTES,{ useHash: true })
 	
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [ModuledataService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
